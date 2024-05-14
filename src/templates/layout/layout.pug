@@ -1,0 +1,32 @@
+- const left_side_bar = ["АЦК-Финансы 2024", "АЦК-Финансы 2023", "АЦК-Планирование", "Обновление АЦК-Планирование","Вакансии", "Обращения граждан", "Антикоррупционная деятельность", "Единая учетная политика при централизации учета", "Материалы ЦБУ", "Аналитические материалы","Прочее" ];
+- const right_side_bar = ["Публичный бюджет (бюджет для граждан)", "Доклады и выступления", "Финансовый контроль", "Методические рекомендации", "Ведомственные перечни муниципальных услуг","Мониторинг финансового менеджмента ГРБС", "Структура муниципального долга", "Кредиторская задолженность","Смета управления финансов","Сведения о предоставленных организациям льготах и отсрочках" ];
+
+include head.pug
+include main-nav.pug
+include side-bar.pug
+include header.pug
+include footer.pug
+    
+block variables
+    
+doctype html
+html(lang='ru')
+    +head(page_title || '', scripts || [])
+
+    body
+        .layout
+            header.layout__header
+                +header()
+            nav.layout__main-nav
+                +mainNav() 
+            main.layout__main
+                block content
+            aside.layout__aside.--left 
+                +sideBar(left_side_bar)
+            aside.layout__aside.--right
+                +sideBar(right_side_bar)
+            .layout__bunners
+            nav.layout__bottom-nav
+            
+            footer.layout__footer
+                +footer()

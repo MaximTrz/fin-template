@@ -1,0 +1,50 @@
+.layout{
+    max-width: 1310px;
+	margin: 0 auto;
+	padding: 0 30px;
+	min-height: 100vh;
+    display: grid;
+	grid-template-rows: auto auto 1fr 290px 315px 80px;
+	grid-template-columns: 292px 1fr 292px;
+    	grid-template-areas: 
+		"header header header"
+		"main-nav main-nav main-nav"
+		"aside-left main aside-right"
+		"bunners bunners bunners"
+        "bottom-nav bottom-nav bottom-nav"
+        "footer footer footer"
+	;
+    &__header{
+        grid-area: header;
+    }
+    &__main-nav{
+        grid-area: main-nav;
+        background-color: $base-blue;
+        margin-bottom: 20px;
+    }
+    &__main{
+        grid-area: main;        
+    }
+    &__aside{        
+        background-color: $ligth-blue;
+        &.--right{
+            grid-area: aside-right;
+        }
+        &.--left{            
+            grid-area: aside-left;
+        }
+    }
+
+    &__bunners{
+        grid-area: bunners;
+        background-color: cadetblue;        
+    }
+    &__bottom-nav{
+        background-color: darksalmon;
+        grid-area: bottom-nav;
+    }
+    &__footer{
+        grid-area: footer;
+        background-color: green;
+    }
+}
