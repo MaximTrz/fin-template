@@ -2,15 +2,14 @@
     list-style: none;
     padding: 0;
     padding-top: 25px;
-    &__item{
-        padding: 22px 25px;
-    }
     &__link{        
-        color: $base-color;        
+        color: $base-color;
+        display: block;        
         text-decoration: none;
-        font-size: 28px;
+        font-size: 26px;
         font-weight: 400;
         text-align: left;
+        padding: 22px 25px;        
         &:hover{
             text-decoration: underline;
         }       

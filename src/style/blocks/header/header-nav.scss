@@ -1,6 +1,7 @@
 .header-nav{
   display: flex;
   justify-content: space-between;
+  //padding: 0px 10px;
   align-items: stretch;
   height: 100%;
   &__link{
@@ -20,7 +21,7 @@
   &__visually-impaired{
     display: block;
     background: url(../img/icons/eye.svg) center no-repeat; background-size: cover;
-    width: 91px;
+    width: 70px;
     height: 66px;
     
   }

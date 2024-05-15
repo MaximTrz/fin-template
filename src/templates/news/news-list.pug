@@ -1,0 +1,6 @@
+include news-article.pug
+
+.news-list
+    - for (let i = 0; i < 3; i++)
+        .news-list__item
+            +newsArticle

@@ -23,7 +23,8 @@
         margin-bottom: 20px;
     }
     &__main{
-        grid-area: main;        
+        grid-area: main;
+        padding: 0 30px;     
     }
     &__aside{        
         background-color: $ligth-blue;
