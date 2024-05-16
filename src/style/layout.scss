@@ -6,14 +6,31 @@
     display: grid;
 	grid-template-rows: auto auto 1fr 290px 315px 80px;
 	grid-template-columns: 292px 1fr 292px;
-    	grid-template-areas: 
-		"header header header"
-		"main-nav main-nav main-nav"
-		"aside-left main aside-right"
-		"bunners bunners bunners"
+    grid-template-areas: 
+        "header header header"
+        "main-nav main-nav main-nav"
+        "aside-left main aside-right"
+        "bunners bunners bunners"
         "bottom-nav bottom-nav bottom-nav"
-        "footer footer footer"
-	;
+        "footer footer footer";
+    @include tablet{
+        
+        grid-template-rows: auto auto auto auto 1fr 290px 315px 80px;
+        grid-template-columns: auto auto auto;
+        grid-template-areas: 
+            "header header header"
+            "main-nav main-nav main-nav"
+            "aside-left aside-left aside-left"
+            "aside-right aside-right aside-right"
+            "main main main"
+            "bunners bunners bunners"
+            "bottom-nav bottom-nav bottom-nav"
+            "footer footer footer";
+ 
+    }
+    @include small-desktop{
+        grid-template-columns: 200px 1fr 200px;    
+    }  
     &__header{
         grid-area: header;
     }
@@ -21,24 +38,75 @@
         grid-area: main-nav;
         background-color: $base-blue;
         margin-bottom: 20px;
+     
     }
     &__main{
         grid-area: main;
-        padding: 0 30px;     
+        padding: 0 30px;
+        margin-bottom: 30px;
+        @include tablet{
+            margin-top: 70px;
+            padding: 0;
+        }     
     }
+
+    &__aside-wrapper{
+        &.--hide{
+            @include tablet{
+                display: none;
+            }
+        }
+    }
+
     &__aside{        
         background-color: $ligth-blue;
+        padding-top: 25px;        
         &.--right{
             grid-area: aside-right;
+            padding-top: 0;             
         }
         &.--left{            
             grid-area: aside-left;
+            
         }
+        @include tablet{
+            background-color: white;
+        }  
+    }
+
+    &__aside-switch{
+        display: none;
+        @include tablet{
+            display: block;
+        }
+    }
+
+    &__aside-switch-wrapper{
+        display: flex;
+        align-items: center;
+        background-color: $base-blue;
+        padding: 10px;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 900;
+        cursor: pointer;     
+    }
+    &__aside-switch-button{
+        clip-path: polygon(0 0, 50% 100%, 100% 0);
+        background-color: #fff;
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+        &.--open{
+            transform: rotateX(180deg);
+        }        
     }
 
     &__bunners{
         grid-area: bunners;
-        background-color: cadetblue;        
+        background-color: cadetblue;
+        margin-top: 80px;        
     }
     &__bottom-nav{
         background-color: darksalmon;

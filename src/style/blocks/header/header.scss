@@ -9,5 +9,11 @@
     font-weight: 900;
     text-align: left;
     color: rgba(9, 37, 111, 1);
+        @include small-desktop{
+        grid-template-columns: 200px 1fr 200px;    
+    }
+    @include small-desktop{
+      font-size: 30px;
+    }  
   }
 }

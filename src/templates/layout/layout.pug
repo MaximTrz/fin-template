@@ -21,10 +21,15 @@ html(lang='ru')
                 +mainNav() 
             main.layout__main
                 block content
-            aside.layout__aside.--left 
-                +sideBar(left_side_bar)
+            aside.layout__aside.--left
+                .layout__aside-switch
+                    .layout__aside-switch-wrapper Разделы
+                        .layout__aside-switch-button
+                .layout__aside-wrapper.--hide
+                    +sideBar(left_side_bar)
             aside.layout__aside.--right
-                +sideBar(right_side_bar)
+                .layout__aside-wrapper.--hide
+                    +sideBar(right_side_bar)
             .layout__bunners
             nav.layout__bottom-nav
             
