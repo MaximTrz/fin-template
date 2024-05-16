@@ -23,12 +23,12 @@ html(lang='ru')
                 block content
             aside.layout__aside.--left
                 .layout__aside-switch
-                    .layout__aside-switch-wrapper Разделы
-                        .layout__aside-switch-button
-                .layout__aside-wrapper.--hide
+                    .layout__aside-switch-wrapper.js-aside-switch Разделы
+                        .layout__aside-switch-button.js-aside-switch-button
+                .layout__aside-wrapper.js-aside-wrapper.--hide
                     +sideBar(left_side_bar)
             aside.layout__aside.--right
-                .layout__aside-wrapper.--hide
+                .layout__aside-wrapper.js-aside-wrapper.--hide
                     +sideBar(right_side_bar)
             .layout__bunners
             nav.layout__bottom-nav
