@@ -15,11 +15,37 @@
       <header class="layout__header">
         <div class="header"> 
           <div class="header__title">Управление финансов и экономики администрации Кунгурского муниципального Округа Пермского края</div><img class="header__logo" src="/img/gerb.png" alt="Герб"/>
+          <div class="header__burger"><a class="burger-btn" href="#"><span class="burger-btn__line"></span></a></div>
         </div>
       </header>
       <nav class="layout__main-nav">
-        <nav class="header-nav"><a class="header-nav__link" href="#" target="_blank">Главная</a><a class="header-nav__link" href="#" target="_blank">Об управлении</a><a class="header-nav__link" href="#" target="_blank">Бюджет Кунгурского МО</a><a class="header-nav__link" href="#" target="_blank">Нормативно-правовые акты</a><a class="header-nav__link" href="#" target="_blank">Контакты</a><a class="header-nav__link" href="#" target="_blank">
-            <div class="header-nav__visually-impaired"></div></a></nav>
+        <nav class="header-nav --hide">
+          <ul class="header-nav__list">
+            <li class="header-nav__item"><a class="header-nav__link" href="#" target="_blank">Главная</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#" target="_blank">Об управлении</a>
+              <ul class="header-nav__sub-list">
+                <li class="header-nav__sub-item"><a class="header-nav__sub-link" href="#" target="_blank">Руководство</a></li>
+                <li class="header-nav__sub-item"><a class="header-nav__sub-link" href="#" target="_blank">Положение об управленни</a></li>
+                <li class="header-nav__sub-item"><a class="header-nav__sub-link" href="#" target="_blank">Муниципальная служба</a></li>
+                <li class="header-nav__sub-item"><a class="header-nav__sub-link" href="#" target="_blank">Планы и отчеты</a></li>
+                <li class="header-nav__sub-item"><a class="header-nav__sub-link" href="#" target="_blank">Прием граждан</a></li>
+              </ul>
+            </li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#" target="_blank">Бюджет Кунгурского МО</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#" target="_blank">Нормативно-правовые акты</a>
+              <ul class="header-nav__sub-list">
+                <li class="header-nav__sub-item"><a class="header-nav__sub-link" href="#" target="_blank">Проекты номативных правоых актов</a></li>
+                <li class="header-nav__sub-item"><a class="header-nav__sub-link" href="#" target="_blank">Решения Думы Кунгурского муниципального округра</a></li>
+                <li class="header-nav__sub-item"><a class="header-nav__sub-link" href="#" target="_blank">Постановления администрации</a></li>
+                <li class="header-nav__sub-item"><a class="header-nav__sub-link" href="#" target="_blank">Приказы управления финансов</a></li>
+                <li class="header-nav__sub-item"><a class="header-nav__sub-link" href="#" target="_blank">Административные рекламенты управления финансов</a></li>
+              </ul>
+            </li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#" target="_blank">Контакты</a></li>
+            <li class="header-nav__item"><a class="header-nav__link" href="#" target="_blank">
+                <div class="header-nav__visually-impaired"></div></a></li>
+          </ul>
+        </nav>
       </nav>
       <main class="layout__main">
         <div class="news-list">

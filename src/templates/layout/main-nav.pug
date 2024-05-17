@@ -1,9 +1,39 @@
 mixin mainNav()            
-    nav.header-nav
-        a.header-nav__link(href="#" target="_blank") Главная
-        a.header-nav__link(href="#" target="_blank") Об управлении
-        a.header-nav__link(href="#" target="_blank") Бюджет Кунгурского МО
-        a.header-nav__link(href="#" target="_blank") Нормативно-правовые акты
-        a.header-nav__link(href="#" target="_blank") Контакты
-        a.header-nav__link(href="#" target="_blank")
-            .header-nav__visually-impaired
+    nav.header-nav.--hide
+        ul.header-nav__list
+            li.header-nav__item
+                a.header-nav__link(href="#" target="_blank") Главная
+            li.header-nav__item
+                a.header-nav__link(href="#" target="_blank") Об управлении
+                ul.header-nav__sub-list
+                    li.header-nav__sub-item
+                        a.header-nav__sub-link(href="#" target="_blank") Руководство
+                    li.header-nav__sub-item
+                        a.header-nav__sub-link(href="#" target="_blank") Положение об управленни
+                    li.header-nav__sub-item
+                        a.header-nav__sub-link(href="#" target="_blank") Муниципальная служба
+                    li.header-nav__sub-item
+                        a.header-nav__sub-link(href="#" target="_blank") Планы и отчеты
+                    li.header-nav__sub-item
+                        a.header-nav__sub-link(href="#" target="_blank") Прием граждан
+
+            li.header-nav__item
+                a.header-nav__link(href="#" target="_blank") Бюджет Кунгурского МО
+            li.header-nav__item
+                a.header-nav__link(href="#" target="_blank") Нормативно-правовые акты
+                ul.header-nav__sub-list
+                    li.header-nav__sub-item
+                        a.header-nav__sub-link(href="#" target="_blank") Проекты номативных правоых актов
+                    li.header-nav__sub-item
+                        a.header-nav__sub-link(href="#" target="_blank") Решения Думы Кунгурского муниципального округра
+                    li.header-nav__sub-item
+                        a.header-nav__sub-link(href="#" target="_blank") Постановления администрации
+                    li.header-nav__sub-item
+                        a.header-nav__sub-link(href="#" target="_blank") Приказы управления финансов
+                    li.header-nav__sub-item
+                        a.header-nav__sub-link(href="#" target="_blank") Административные рекламенты управления финансов
+            li.header-nav__item
+                a.header-nav__link(href="#" target="_blank") Контакты
+            li.header-nav__item
+                a.header-nav__link(href="#" target="_blank")
+                    .header-nav__visually-impaired

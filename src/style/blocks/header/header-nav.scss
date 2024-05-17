@@ -1,12 +1,38 @@
 .header-nav{
-  display: flex;
-  justify-content: space-between;
-  //padding: 0px 10px;
-  align-items: stretch;
-  height: 100%;
-  &__link{
+  
+  &.--hide{
+    @include tablet{
+      display: none;
+    }    
+  }
+
+  &__list{
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+      height: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;      
+      @include tablet{
+        display: none;
+      }
+      @include tablet{
+        display: block;
+      }       
+  }
+
+  &__item{
     display: flex;
     align-items: center;
+    position: relative; 
+  }
+
+  &__item:hover .header-nav__sub-list {
+    display: block;
+  }
+
+  &__link{
     padding: 47px 20px;
     font-size: 26px;
     font-weight: 900;
@@ -15,17 +41,65 @@
     transition: all ease-out .3s;
     color: #fff;
     &:hover{
-      text-decoration: underline;
+      text-decoration: underline;      
     }
     @include small-desktop{
         font-size: 16px;          
+    }
+    @include tablet{
+        padding: 20px 20px;
     }   
   }
+
+  &__sub-list{
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    top: 100%;
+    left: 0;   
+    background-color: #fff;
+    padding: 0;        
+  }
+
+  &__sub-item{
+    padding-right: 10px;
+    padding-left: 35px;
+    position: relative;
+    border-bottom: 1px $base-blue dotted; 
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 15px;
+      height: 15px;
+      background-color: $base-blue;
+      border-radius: 50%;  
+      top: 50%;
+      left: 12px;      
+      transform: translateY(-50%);
+    }
+    &:last-child {
+      border-bottom: none;
+    }  
+  }
+  &__sub-link{
+    display: block;
+    color: #09256f;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 20px;
+    padding-left: 10px;    
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+
   &__visually-impaired{
     display: block;
     background: url(../img/icons/eye.svg) center no-repeat; background-size: cover;
     width: 70px;
-    height: 66px;
-    
+    height: 66px;     
   }
 }

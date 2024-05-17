@@ -1,5 +1,14 @@
 .news-list{
+    display:  flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    height: 100%;
     &__item{
         margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
+
 }

@@ -13,6 +13,9 @@
         "bunners bunners bunners"
         "bottom-nav bottom-nav bottom-nav"
         "footer footer footer";
+    @include small-desktop{
+        grid-template-columns: 200px 1fr 200px;    
+    } 
     @include tablet{
         
         grid-template-rows: auto auto auto auto 1fr 290px 315px 80px;
@@ -25,12 +28,12 @@
             "main main main"
             "bunners bunners bunners"
             "bottom-nav bottom-nav bottom-nav"
-            "footer footer footer";
- 
+            "footer footer footer"; 
     }
-    @include small-desktop{
-        grid-template-columns: 200px 1fr 200px;    
-    }  
+    @include phone{
+        padding: 0;
+    }
+ 
     &__header{
         grid-area: header;
     }
@@ -43,7 +46,7 @@
     &__main{
         grid-area: main;
         padding: 0 30px;
-        margin-bottom: 30px;
+        
         @include tablet{
             margin-top: 70px;
             padding: 0;
