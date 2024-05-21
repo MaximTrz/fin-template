@@ -1,16 +1,16 @@
 .layout{
-    max-width: 1310px;
+    max-width: 1366px;
 	margin: 0 auto;
 	padding: 0 30px;
 	min-height: 100vh;
     display: grid;
-	grid-template-rows: auto auto 1fr 290px 315px 80px;
-	grid-template-columns: 292px 1fr 292px;
+	grid-template-rows: auto auto 1fr auto 315px 80px;
+	grid-template-columns: 230px 1fr 230px;
     grid-template-areas: 
         "header header header"
         "main-nav main-nav main-nav"
         "aside-left main aside-right"
-        "bunners bunners bunners"
+        "banners banners banners"
         "bottom-nav bottom-nav bottom-nav"
         "footer footer footer";
     @include small-desktop{
@@ -18,7 +18,7 @@
     } 
     @include tablet{
         
-        grid-template-rows: auto auto auto auto 1fr 290px 315px 80px;
+        grid-template-rows: auto auto auto auto 1fr auto 315px 80px;
         grid-template-columns: auto auto auto;
         grid-template-areas: 
             "header header header"
@@ -26,7 +26,7 @@
             "aside-left aside-left aside-left"
             "aside-right aside-right aside-right"
             "main main main"
-            "bunners bunners bunners"
+            "banners banners banners"
             "bottom-nav bottom-nav bottom-nav"
             "footer footer footer"; 
     }
@@ -41,14 +41,16 @@
         grid-area: main-nav;
         background-color: $base-blue;
         margin-bottom: 20px;
-     
+        @include tablet{
+            margin-bottom: 10px;
+        }     
     }
     &__main{
         grid-area: main;
-        padding: 0 30px;
+        padding: 0 50px;
         
         @include tablet{
-            margin-top: 70px;
+            margin-top: 20px;
             padding: 0;
         }     
     }
@@ -63,14 +65,15 @@
 
     &__aside{        
         background-color: $ligth-blue;
-        padding-top: 25px;        
+        padding-top: 5px;  
+        @include tablet{
+            padding-top: 0;
+        }        
         &.--right{
-            grid-area: aside-right;
-            padding-top: 0;             
+            grid-area: aside-right;           
         }
-        &.--left{            
-            grid-area: aside-left;
-            
+        &.--left{
+            grid-area: aside-left;            
         }
         @include tablet{
             background-color: white;
@@ -106,10 +109,10 @@
         }        
     }
 
-    &__bunners{
-        grid-area: bunners;
-        background-color: cadetblue;
-        margin-top: 80px;        
+    &__banners{
+        grid-area: banners;
+        margin-top: 80px;
+        margin-bottom: 20px;  
     }
     &__bottom-nav{
         background-color: darksalmon;

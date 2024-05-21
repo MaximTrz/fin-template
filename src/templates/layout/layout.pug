@@ -4,6 +4,7 @@
 include head.pug
 include main-nav.pug
 include side-bar.pug
+
 include header.pug
 include footer.pug
     
@@ -30,7 +31,9 @@ html(lang='ru')
             aside.layout__aside.--right
                 .layout__aside-wrapper.js-aside-wrapper.--hide
                     +sideBar(right_side_bar)
-            .layout__bunners
+            section.layout__banners
+                include ../banners/banner-list.pug
+
             nav.layout__bottom-nav
             
             footer.layout__footer

@@ -33,9 +33,9 @@
   }
 
   &__link{
-    padding: 47px 20px;
-    font-size: 26px;
-    font-weight: 900;
+    padding: 23px 20px;
+    font-size: 20px;
+    font-weight: 300;
     text-align: center;    
     text-decoration: none;
     transition: all ease-out .3s;
@@ -99,7 +99,7 @@
   &__visually-impaired{
     display: block;
     background: url(../img/icons/eye.svg) center no-repeat; background-size: cover;
-    width: 70px;
-    height: 66px;     
+    width: 47px;
+    height: 35px;     
   }
 }
