@@ -1,3 +1,4 @@
+@import "normalize";
 @import "libs";
 @import "constants";
 @import "functions";
@@ -6,8 +7,9 @@
 @import "layout";
 
 //какие-то глобальные стили
-@import "common/fonts";
 @import "common/base";
+@import "common/fonts";
+
 
 //Ваши блоки
 @import "blocks/header/header";

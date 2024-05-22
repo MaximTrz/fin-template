@@ -6,6 +6,9 @@
     display: grid;
 	grid-template-rows: auto auto 1fr auto 315px 80px;
 	grid-template-columns: 230px 1fr 230px;
+    @include small-desktop{
+        padding: 0;
+    }
     grid-template-areas: 
         "header header header"
         "main-nav main-nav main-nav"
@@ -13,11 +16,7 @@
         "banners banners banners"
         "bottom-nav bottom-nav bottom-nav"
         "footer footer footer";
-    @include small-desktop{
-        grid-template-columns: 200px 1fr 200px;    
-    } 
-    @include tablet{
-        
+    @include tablet{        
         grid-template-rows: auto auto auto auto 1fr auto 315px 80px;
         grid-template-columns: auto auto auto;
         grid-template-areas: 
@@ -65,9 +64,10 @@
 
     &__aside{        
         background-color: $ligth-blue;
-        padding-top: 5px;  
+        padding-top: 5px;
         @include tablet{
             padding-top: 0;
+            background-color: white;
         }        
         &.--right{
             grid-area: aside-right;           
@@ -75,9 +75,6 @@
         &.--left{
             grid-area: aside-left;            
         }
-        @include tablet{
-            background-color: white;
-        }  
     }
 
     &__aside-switch{
@@ -112,7 +109,8 @@
     &__banners{
         grid-area: banners;
         margin-top: 80px;
-        margin-bottom: 20px;  
+        margin-bottom: 20px;
+        overflow: hidden;  
     }
     &__bottom-nav{
         background-color: darksalmon;

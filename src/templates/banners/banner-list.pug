@@ -3,7 +3,8 @@ include banner.pug
 - var images = ['3.jpg', '1.jpg', '2.jpg', '4.jpg']
 
 
-.banners-list
-    each image in images
-        .banners-list__item
-            +banner('/images/banners/' + image)
+.banners-list.swiper.js-banner-slider
+    .banners-list__wrapper.swiper-wrapper
+        each image in images
+            .banners-list__item.swiper-slide
+                +banner('/images/banners/' + image)

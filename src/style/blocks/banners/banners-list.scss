@@ -1,12 +1,8 @@
-.banners-list{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    flex-wrap: wrap;
-    &__item{
-        flex-basis: 300px;
-        height: 292px;
-       overflow: hidden;  
+.banners-list{    
+    &__item{      
+       display: flex;
+       align-items: center;
+       justify-content: center; 
+       
     }
 }
