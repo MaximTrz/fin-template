@@ -7,7 +7,12 @@ const newsSwiper = new Swiper('.js-banner-slider', {
     spaceBetween: 25,
 
     autoplay: {
-        delay: 1000,
+        delay: 3000,
+    },
+
+    navigation: {
+        nextEl: '.banners-list__arrow--next',
+        prevEl: '.banners-list__arrow--prev',
     },
     
     breakpoints: {
