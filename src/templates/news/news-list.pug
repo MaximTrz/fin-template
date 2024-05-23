@@ -1,6 +1,8 @@
 include news-article.pug
 
 section.news-list
-    - for (let i = 0; i < 2; i++)
-        .news-list__item
-            +newsArticle
+    .news-list__wrapper
+        - for (let i = 0; i < 2; i++)
+            .news-list__item
+                +newsArticle
+    a(href="#").news-list__all Все новости

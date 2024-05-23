@@ -7,7 +7,8 @@ include side-bar.pug
 
 include header.pug
 include footer.pug
-    
+include ../visually-impaired.pug 
+
 block variables
     
 doctype html
@@ -24,8 +25,11 @@ html(lang='ru')
                 block content
             aside.layout__aside.--left
                 .layout__aside-switch
-                    .layout__aside-switch-wrapper.js-aside-switch Разделы
-                        .layout__aside-switch-button.js-aside-switch-button
+                    .layout__aside-switch-wrapper.js-aside-switch 
+                        .layout__aside-switch-button.js-aside-switch-button Разделы
+                        .layout__aside-visually
+                            +visually()
+
                 .layout__aside-wrapper.js-aside-wrapper.--hide
                     +sideBar(left_side_bar)
             aside.layout__aside.--right
@@ -35,6 +39,6 @@ html(lang='ru')
                 include ../banners/banner-list.pug
 
             nav.layout__bottom-nav
-            
+                include bottom-nav.pug
             footer.layout__footer
                 +footer()

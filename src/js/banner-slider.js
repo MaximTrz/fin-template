@@ -5,6 +5,10 @@ const newsSwiper = new Swiper('.js-banner-slider', {
     slidesPerView: 4,
     dynamicBullets: true,
     spaceBetween: 25,
+
+    autoplay: {
+        delay: 1000,
+    },
     
     breakpoints: {
         320: {

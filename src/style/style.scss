@@ -14,10 +14,12 @@
 //Ваши блоки
 @import "blocks/header/header";
 @import "blocks/header/header-nav";
+@import "blocks/visually-impaired.scss";
 @import "blocks/burger";
 @import "blocks/side-bar";
 @import "blocks/news/news-list.scss";
 @import "blocks/news/news-article.scss";
 @import "blocks/banners/banners-list.scss";
 @import "blocks/banners/banner.scss";
+@import "blocks/bottom-nav.scss";
 @import "blocks/footer";

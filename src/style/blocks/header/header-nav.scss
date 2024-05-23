@@ -48,7 +48,12 @@
     }
     @include tablet{
         padding: 20px 20px;
-    }   
+    }
+    &.--visually{
+      @include tablet{
+        display: none;
+      } 
+    }  
   }
 
   &__sub-list{
@@ -58,7 +63,8 @@
     top: 100%;
     left: 0;   
     background-color: #fff;
-    padding: 0;        
+    padding: 0;
+    z-index: 999;        
   }
 
   &__sub-item{
@@ -97,9 +103,7 @@
 
 
   &__visually-impaired{
-    display: block;
-    background: url(../img/icons/eye.svg) center no-repeat; background-size: cover;
     width: 47px;
-    height: 35px;     
+    height: 35px;    
   }
 }
