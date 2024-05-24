@@ -8,8 +8,5 @@ include banner.pug
         each image in images
             .banners-list__item.swiper-slide
                 +banner('/images/banners/' + image)
-    .banners-list__arrows
-        .banners-list__arrow.banners-list__arrow--prev.--prev
-            .banners-list__arrow-img.--prev
-        .banners-list__arrow.banners-list__arrow--next
-            .banners-list__arrow-img
+    .banners-list__next.swiper-button-next
+    .banners-list__prev.swiper-button-prev

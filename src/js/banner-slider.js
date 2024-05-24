@@ -11,8 +11,8 @@ const newsSwiper = new Swiper('.js-banner-slider', {
     },
 
     navigation: {
-        nextEl: '.banners-list__arrow--next',
-        prevEl: '.banners-list__arrow--prev',
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
     
     breakpoints: {
