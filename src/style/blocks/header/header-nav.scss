@@ -1,5 +1,5 @@
 .header-nav{
-  
+  background-color: $base-blue;
   &.--hide{
     @include tablet{
       display: none;
@@ -25,7 +25,10 @@
   &__item{
     display: flex;
     align-items: center;
-    position: relative; 
+    position: relative;
+    @include tablet{
+      display: block;
+    } 
   }
 
   &__item:hover .header-nav__sub-list {
@@ -33,6 +36,7 @@
   }
 
   &__link{
+    display: block;
     padding: 23px 20px;
     font-size: 20px;
     font-weight: 300;
@@ -40,14 +44,18 @@
     text-decoration: none;
     transition: all ease-out .3s;
     color: #fff;
+    cursor: pointer;
     &:hover{
       text-decoration: underline;      
     }
     @include small-desktop{
-        font-size: 16px;          
+        font-size: 16px;        
     }
     @include tablet{
-        padding: 20px 20px;
+        padding: 23px 20px;
+        font-size: 18px;
+        font-weight: 900;
+        text-align: left;
     }
     &.--visually{
       @include tablet{
@@ -64,12 +72,17 @@
     left: 0;   
     background-color: #fff;
     padding: 0;
-    z-index: 999;        
+    z-index: 999;
+    @include tablet{
+      position: static;
+      display: block;
+      background-color: $base-blue;      
+    }       
   }
 
   &__sub-item{
     padding-right: 10px;
-    padding-left: 35px;
+    padding-left: 50px;
     position: relative;
     border-bottom: 1px $base-blue dotted; 
     &:before {
@@ -83,6 +96,14 @@
       top: 50%;
       left: 12px;      
       transform: translateY(-50%);
+    }
+    @include tablet{
+        &:before {
+          background-color: #fff;
+          width: 10px;
+          height: 10px;
+          left: 30px;   
+        }
     }
     &:last-child {
       border-bottom: none;
@@ -98,6 +119,11 @@
     padding-left: 10px;    
     &:hover{
       text-decoration: underline;
+    }
+    @include tablet{
+      color: #fff;
+        font-size: 18px; 
+        font-weight: 300;  
     }
   }
 
