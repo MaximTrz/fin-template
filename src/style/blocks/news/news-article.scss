@@ -1,6 +1,7 @@
 .news-article{
     box-shadow: 0px 7px 25px 10px #BDB6B6E3;
     padding: 25px 25px 15px 25px;
+
     @include phone{
         box-shadow: 0px 7px 5px 3px #BDB6B6E3;
     }
@@ -11,10 +12,17 @@
         margin: 0;
         margin-bottom: 5px;
         text-align: center;
+        &.--small{
+            font-size: 18px;
+            font-weight: 700;
+        }
     }
     &__image-wrapper{
         height: 200px;
         overflow: hidden;
+        &.--small{
+            height: 150px;
+        }
     }
     &__image{
         width: 100%;
@@ -24,6 +32,10 @@
         font-size: 20px;
         font-weight: 300;
         text-align: left;
+        
+        &.--small{            
+            font-size: 16px;            
+        }
     }
     &__button-wrapepr{
         display: flex;
@@ -41,6 +53,9 @@
         padding: 5px 10px;
         &:hover{
             background-color: darken(#D9D9D9, 15%);
+        }
+        &.--small{
+            font-size: 14px;
         }
     }
 }

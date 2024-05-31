@@ -1,0 +1,15 @@
+.all-news{
+    position: relative;
+    &__wrapper{
+        display: grid;
+        justify-content: center;
+        gap: 30px;
+        grid-template-columns: repeat(auto-fit, 350px);
+    }
+    &__pagination{
+        position: absolute;
+        left: 50%;
+        bottom: -100px;
+        transform: translateX(-50%)        
+    }
+}

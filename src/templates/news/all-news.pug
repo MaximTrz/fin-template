@@ -1,0 +1,9 @@
+include news-article.pug
+
+section.all-news
+    .all-news__wrapper
+        - for (let i = 0; i < 6; i++)
+            .all-news__item
+                +newsArticle(true)
+    .all-news__pagination
+        include ../components/pagination.pug
