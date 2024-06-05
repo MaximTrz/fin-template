@@ -1,0 +1,21 @@
+extends ./layout/layout
+
+include components/section-title.pug
+
+
+block variables
+    - var page_title = 'Прием граждан';
+include ./lists/list
+    
+
+block content
+   section.feedback
+        .feedback__title
+            +sectionTitle("Прием граждан")
+        .feedback__info
+            p Приём граждан ведется по адресу:
+            p г. Кунгур, ул.Советская 20
+            p Среда — 15.00 - 17.00
+        .feedback__comment  Заполните все поля, помеченные символом «*»
+        .feedback__form
+            include components/feedback-form.pug

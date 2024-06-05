@@ -1,0 +1,47 @@
+.feedback-form {
+    
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #D9D9D961;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__group {
+        margin-bottom: 25px;
+    }
+
+    &__label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 8px;
+    }
+
+    &__input,
+    &__textarea {
+        width: calc(100% - 16px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    &__textarea {
+        height: 120px;
+    }
+
+    &__submit {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #45a049;
+        }
+    }
+}

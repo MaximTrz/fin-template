@@ -1,0 +1,31 @@
+.feedback-form
+    form.feedback-form__form(action="#" method="post")
+                
+        .feedback-form__group
+            label.feedback-form__label(for="last-name") Фамилия
+                sup *                
+            input.feedback-form__input(type="text" id="last-name" name="last-name" required)
+        
+        .feedback-form__group
+            label.feedback-form__label(for="name") Имя
+                sup *
+   
+            input.feedback-form__input(type="text" id="name" name="name" required)
+        
+        .feedback-form__group
+            label.feedback-form__label(for="surname") Отчество
+                sup *
+            input.feedback-form__input(type="text" id="surname" name="surname" required)
+        
+        .feedback-form__group
+            label.feedback-form__label(for="email") Адрес электронной почты
+                sup *
+            input.feedback-form__input(type="email" id="email" name="email" required)
+        
+        .feedback-form__group
+            label.feedback-form__label(for="message") Текст обращения
+                sup *
+            textarea.feedback-form__textarea(id="message" name="message" required)
+        
+        .feedback-form__group
+            input.feedback-form__submit(type="submit" value="Отправить")

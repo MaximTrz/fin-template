@@ -1,0 +1,11 @@
+.feedback{
+    @include phone{
+        padding: 0 15px;
+    }
+    &__comment{
+        font-size: 20px;
+        font-weight: 900;
+        color: #09256f;
+        margin-bottom: 20px;
+    }
+}

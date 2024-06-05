@@ -1,6 +1,9 @@
+include ../components/section-title.pug
+
 mixin list(title)
     .list
-        h2.list__title=title
+        .list__title
+            +sectionTitle(title)
         ul.list__wrapper
             - for (let i = 0; i < 10; i++)
                 li.list__item
