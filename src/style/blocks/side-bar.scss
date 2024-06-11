@@ -1,18 +1,30 @@
-.side-bar{
-    
+.side-bar{    
     list-style: none;
-    padding: 0;    
-    &__link{       
+    padding: 0; 
+    
+    &__item{
+        &:first-child .side-bar__link {
+           padding: 30px 15px;
+           @include tablet{
+                padding: 22px 15px; 
+           }
+        }
+    }
+
+    &__link{
         font-size: 18px; 
         color: $base-color;
         display: block;        
         text-decoration: none;        
         font-weight: 400;
         text-align: center;
-        padding: 22px 15px;       
+        padding: 22px 15px;        
+
+        transition: background-color 0.5s cubic-bezier(0.5, 0, 0.5, 1);  
         &:hover{
-            text-decoration: underline;
+            background-color: lighten($ligth-blue, 3%);                     
         }
+
         @include tablet{
             font-size: 16px; 
             color: #09256F;

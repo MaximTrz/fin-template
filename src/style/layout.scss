@@ -65,7 +65,7 @@
 
     &__aside{        
         background-color: $ligth-blue;
-        padding-top: 5px;
+        //padding-top: 5px;
         @include tablet{
             padding-top: 0;
             background-color: white;

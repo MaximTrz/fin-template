@@ -6,9 +6,6 @@
         flex-direction: column;  
         justify-content: space-between;
         height: 100%; 
-        @include small-desktop{
-            padding: 0 50px;
-        }
         @include tablet{
             padding: 0;
         }
