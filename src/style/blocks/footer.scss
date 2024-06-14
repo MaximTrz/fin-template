@@ -1,7 +1,11 @@
-footer{
-  font-size: 14px;
-  font-weight: 300;
-  text-align: center;
-  text-align: center;
-  padding: 20px;
+.footer{ 
+  &__link{
+      display: block;
+      font-size: 16px;
+      font-weight: 300;
+      text-align: center;
+      padding: 20px;
+      text-decoration: none;
+      color: black;
+  }
 }
