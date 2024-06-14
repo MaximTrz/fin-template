@@ -31,7 +31,7 @@
     } 
   }
 
-  &__item:hover .header-nav__sub-list {
+  &__item:hover .sub-menu {
     display: block;
   }
 
@@ -64,7 +64,7 @@
     }  
   }
 
-  &__sub-list{
+  .sub-menu{
     display: none;
     list-style-type: none;
     position: absolute;
@@ -77,55 +77,60 @@
       position: static;
       display: block;
       background-color: $base-blue;      
-    }       
+    }
+      .menu-item{
+        padding-right: 10px;
+        padding-left: 50px;
+        position: relative;
+        border-bottom: 1px $base-blue dotted; 
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          width: 15px;
+          height: 15px;
+          background-color: $base-blue;
+          border-radius: 50%;  
+          top: 50%;
+          left: 12px;      
+          transform: translateY(-50%);
+        }
+        @include tablet{
+            &:before {
+              background-color: #fff;
+              width: 10px;
+              height: 10px;
+              left: 30px;   
+            }
+        }
+        &:last-child {
+          border-bottom: none;
+        }  
+      }
+
+    .header-nav__link{
+      display: block;
+      color: #09256f;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 900;
+      padding: 20px;
+      padding-left: 10px;
+      text-align: left;    
+      &:hover{
+        text-decoration: underline;
+      }
+      @include tablet{
+        color: #fff;
+          font-size: 18px; 
+          font-weight: 300;  
+      }
+    }
+
   }
 
-  &__sub-item{
-    padding-right: 10px;
-    padding-left: 50px;
-    position: relative;
-    border-bottom: 1px $base-blue dotted; 
-    &:before {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 15px;
-      height: 15px;
-      background-color: $base-blue;
-      border-radius: 50%;  
-      top: 50%;
-      left: 12px;      
-      transform: translateY(-50%);
-    }
-    @include tablet{
-        &:before {
-          background-color: #fff;
-          width: 10px;
-          height: 10px;
-          left: 30px;   
-        }
-    }
-    &:last-child {
-      border-bottom: none;
-    }  
-  }
-  &__sub-link{
-    display: block;
-    color: #09256f;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 900;
-    padding: 20px;
-    padding-left: 10px;    
-    &:hover{
-      text-decoration: underline;
-    }
-    @include tablet{
-      color: #fff;
-        font-size: 18px; 
-        font-weight: 300;  
-    }
-  }
+
+
 
 
   &__visually-impaired{

@@ -13,6 +13,7 @@
     font-weight: 900;
     text-align: center;
     color: rgba(9, 37, 111, 1);
+    text-decoration: none;
    @include wide-desktop{
       font-size: 24px;
     }
@@ -28,6 +29,10 @@
     @include phone{
       font-size: 12px;
     }  
+  }
+  &__logo-link{
+    display: block;
+    font-size: 0;
   }
   &__logo{
     @include wide-desktop{
