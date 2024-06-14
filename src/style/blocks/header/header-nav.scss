@@ -31,7 +31,7 @@
     } 
   }
 
-  &__item:hover .sub-menu {
+  &__item:hover &__sub-menu {
     display: block;
   }
 
@@ -64,7 +64,7 @@
     }  
   }
 
-  .sub-menu{
+  &__sub-menu{
     display: none;
     list-style-type: none;
     position: absolute;
@@ -78,37 +78,39 @@
       display: block;
       background-color: $base-blue;      
     }
-      .menu-item{
-        padding-right: 10px;
-        padding-left: 50px;
-        position: relative;
-        border-bottom: 1px $base-blue dotted; 
-        &:before {
-          content: "";
-          position: absolute;
-          display: block;
-          width: 15px;
-          height: 15px;
-          background-color: $base-blue;
-          border-radius: 50%;  
-          top: 50%;
-          left: 12px;      
-          transform: translateY(-50%);
-        }
-        @include tablet{
-            &:before {
-              background-color: #fff;
-              width: 10px;
-              height: 10px;
-              left: 30px;   
-            }
-        }
-        &:last-child {
-          border-bottom: none;
-        }  
-      }
+  }
 
-    .header-nav__link{
+  .header-nav__sub-menu-item{
+      padding-right: 10px;
+      padding-left: 50px;
+      position: relative;
+      border-bottom: 1px $base-blue dotted; 
+      &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 15px;
+        height: 15px;
+        background-color: $base-blue;
+        border-radius: 50%;  
+        top: 50%;
+        left: 12px;      
+        transform: translateY(-50%);
+      }
+      @include tablet{
+          &:before {
+            background-color: #fff;
+            width: 10px;
+            height: 10px;
+            left: 30px;   
+          }
+      }
+      &:last-child {
+        border-bottom: none;
+      }  
+    }
+
+  &__sub-menu-link{
       display: block;
       color: #09256f;
       text-decoration: none;
@@ -127,7 +129,6 @@
       }
     }
 
-  }
 
 
 
