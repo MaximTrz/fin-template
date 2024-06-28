@@ -4,6 +4,10 @@
     padding: 30px;
     background-color: #D9D9D961;
 
+    p{
+        margin: 0;
+    }
+
     &__title {
         text-align: center;
         margin-bottom: 20px;
@@ -31,17 +35,18 @@
         height: 120px;
     }
 
-    &__submit {
+    input[type="submit"] {
         background-color: #4CAF50;
         color: white;
         padding: 12px 24px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: background-color 0.2s ease;
 
         &:hover {
-            background-color: #45a049;
+            background-color: darken(#4CAF50, 10%);
         }
     }
+
 }
