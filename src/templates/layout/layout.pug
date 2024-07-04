@@ -26,14 +26,14 @@ html(lang='ru')
             aside.layout__aside.--left
                 .layout__aside-switch
                     .layout__aside-switch-wrapper.js-aside-switch 
-                        .layout__aside-switch-button.js-aside-switch-button Разделы
+                        .layout__aside-switch-button.js-aside-switch-button.--visually-impaired Разделы
                         .layout__aside-visually
                             +visually()
 
                 .layout__aside-wrapper.js-aside-wrapper.--hide
                     +sideBar(left_side_bar)
             aside.layout__aside.--right
-                .layout__aside-wrapper.js-aside-wrapper.--hide
+                .layout__aside-wrapper.js-aside-wrapper.js-visually-impaired.--hide
                     +sideBar(right_side_bar)
             section.layout__banners
                 include ../banners/banner-list.pug

@@ -6,6 +6,9 @@
     background-color: $base-blue;
     padding: 20px 40px;
     gap: 30px;
+    @include tablet{
+        grid-template-columns: repeat(2, 1fr);
+    }
     @include phone{
         display: block;
     }

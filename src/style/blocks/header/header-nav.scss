@@ -26,6 +26,9 @@
     display: flex;
     align-items: center;
     position: relative;
+    &.--visually-impaired{
+      display: none;
+    }
     @include tablet{
       display: block;
     } 
@@ -65,7 +68,7 @@
   }
 
   &__sub-menu{
-    display: none;
+    display: none;    
     list-style-type: none;
     position: absolute;
     top: 100%;
@@ -73,6 +76,9 @@
     background-color: #fff;
     padding: 0;
     z-index: 999;
+    &.--visually-impaired{
+      border: 2px solid #000;
+    }
     @include tablet{
       position: static;
       display: block;

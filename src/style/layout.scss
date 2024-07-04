@@ -112,6 +112,11 @@
             &::after{
                 transform: rotateX(180deg);   
             }
+        }
+        &.--visually-impaired{
+            &::after{  
+                background-color: #000;     
+            }  
         }        
     }
 

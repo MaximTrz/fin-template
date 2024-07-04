@@ -23,11 +23,17 @@
     @include tablet{
         order: 2;
         text-align: center;
-        font-size: 20px;
+        font-size: 20px !important;
         margin: 0 10px;
+        &.--visually-impaired{
+          font-size: 20px !important;
+        }
     }
     @include phone{
-      font-size: 12px;
+      font-size: 12px !important;
+      &.--visually-impaired{
+          font-size: 12px !important;
+      }
     }  
   }
   &__logo-link{
@@ -50,4 +56,42 @@
     }
   }
 
+}
+
+///// Для увеличения специфичности (для версии для слабовидящих)
+.header .header__title {
+    padding: 0 15px;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    color: rgba(9, 37, 111, 1);
+    text-decoration: none;
+
+    @include wide-desktop {
+        font-size: 24px;
+    }
+
+    @include small-desktop {
+        font-size: 24px;
+    }
+
+    @include tablet {
+        order: 2;
+        text-align: center;
+        font-size: 20px !important;
+        margin: 0 10px;
+
+        &.--visually-impaired {
+            font-size: 20px !important;
+        }
+    }
+
+    @include phone {
+        font-size: 12px !important;
+
+        &.--visually-impaired {
+            font-size: 12px !important;
+        }
+    }
 }
